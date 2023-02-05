@@ -4,24 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="leidachui">
+    <meta name="description" content="测试页面">
     <title>测试网站</title>
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet"> <!--在html中使用css-->
     <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <!--Stylesheet -- 定义一个外部加载的样式表，必须加上-->
+    <link rel="icon" href="test.png" type="image/x-icon">
+    <script src="scripts/currTime.js" type="text/javascript">
+        window.onload = function() {
+            window.requestAnimationFrame(currTime)
+        }
+    </script>
 </head>
 <body>
+    <div id="curr_date"></div>
+    <!--最佳实践: <h1>表示故事的名字，<h2>表示每个章节的标题， <h3>表示每个章节下的子标题-->
     <h1>奖状合集</h1>
     <button id="button_1">切换用户</button>
-    <p>奖项包括：</p>
+    <p><strong>奖项</strong>包括：</p>
     <ol>
-        <li><a href="https://cloud.tencent.com/developer/article/1820331">研发奖</a></li>
-        <li><a href="https://new.qq.com/rain/a/20220124A07M6X00">运营奖</a></li>
+        <li><a href="https://cloud.tencent.com/developer/article/1820331" target="_blank">研发奖</a></li>
+        <li><a href="https://new.qq.com/rain/a/20220124A07M6X00" target="_blank">运营奖</a></li>
         <li>创新奖</li>
         <li>以及其他奖项</li>
     </ol>
-    <p>这是卓越研发奖</p>
+    <p>这是<em>卓越研发</em>奖</p>
     <img src="images/卓越研发奖.png" alt="卓越研发奖"/>
     <button id="button_2">下一张</button>
+    <p>更多说明，请移步<a href="projects/detail.html" target="_blank">这里</a></p>
+    <p>也可以<a href="mailto:1113019076@qq.com">发邮件给作者</a></p>
+
+    <!--在html中使用javascript， defer表示在解析完成 HTML 后再加载 JavaScript-->
     <script src="scripts/main.js" defer></script>
 </body>
 </html>

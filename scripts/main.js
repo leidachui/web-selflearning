@@ -41,3 +41,7 @@ myButton2.onclick = function() {
         myImg.setAttribute('src', 'images/同心战役特别贡献奖.png')
     }
 }
+
+window.onload = function() {
+    window.requestAnimationFrame(currTime)
+}
